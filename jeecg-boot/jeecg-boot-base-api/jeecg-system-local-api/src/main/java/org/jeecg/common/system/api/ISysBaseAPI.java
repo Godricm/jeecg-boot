@@ -28,6 +28,17 @@ public interface ISysBaseAPI extends CommonAPI {
     void sendSysAnnouncement(MessageDTO message);
 
     /**
+     * 发送系统消息
+     * @param actBusId 流程业务id
+     * @param fromUser 发送人(用户登录账户)
+     * @param fromUser 发送人(用户登录账户)
+     * @param toUser  发送给(用户登录账户)
+     * @param title  消息主题
+     * @param msgContent  消息内容
+     */
+    void sendSysAnnouncement_act(String actBusId, String fromUser,String toUser,String title, String msgContent);
+
+    /**
      * 2发送消息 附带业务参数
      * @param message 使用构造器赋值参数
      */
@@ -58,6 +69,13 @@ public interface ISysBaseAPI extends CommonAPI {
      * @return
      */
     LoginUser getUserById(String id);
+
+    /**
+     * 根据用户姓名查询用户信息  模糊查询 realname || username
+     * @param name
+     * @return
+     */
+    List<LoginUser> getUsersByName(String name);
 
     /**
      * 7通过用户账号查询角色集合

@@ -203,6 +203,10 @@ public class ShiroConfig {
         // 未授权界面返回JSON
         shiroFilterFactoryBean.setUnauthorizedUrl("/sys/common/403");
         shiroFilterFactoryBean.setLoginUrl("/sys/common/403");
+        // activiti 模块
+        filterChainDefinitionMap.put("/activiti/**", "anon");
+        filterChainDefinitionMap.put("/diagram-viewer/**", "anon");
+        filterChainDefinitionMap.put("/editor-app/**", "anon");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
         return shiroFilterFactoryBean;
     }

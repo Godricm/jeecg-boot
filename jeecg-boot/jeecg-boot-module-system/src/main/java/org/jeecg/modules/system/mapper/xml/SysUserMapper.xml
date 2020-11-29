@@ -162,4 +162,7 @@
 			and username != #{username}
 		</if>
 	</select>
+    <select id="getUsersByName" resultType="org.jeecg.common.system.vo.LoginUser">
+		select * from sys_user where (realname like '%${name}%' or username like '%${name}%') and del_flag = 0
+	</select>
 </mapper>
