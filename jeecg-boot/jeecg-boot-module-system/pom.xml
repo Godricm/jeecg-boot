@@ -44,30 +44,7 @@
             <artifactId>jeecg-boot-module-activiti</artifactId>
             <version>${jeecgboot.version}</version>
         </dependency>
-
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
-	<dependencies>
-		<dependency>
-			<groupId>org.jeecgframework.boot</groupId>
-			<artifactId>jeecg-system-local-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.jeecgframework.boot</groupId>
-			<artifactId>jeecg-boot-module-demo</artifactId>
-			<version>${jeecgboot.version}</version>
-		</dependency>
-
-
-	</dependencies>
 
 	<build>
 		<plugins>
